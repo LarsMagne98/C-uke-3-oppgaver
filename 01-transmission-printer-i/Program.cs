@@ -1,3 +1,4 @@
+// Overloading metoder. c# velger riktig metode ut fra hvor mange argumenter som blir tildelt.
 class Program
 {
     static void Main(string[] args)

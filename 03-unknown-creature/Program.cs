@@ -1,10 +1,9 @@
+// En klasse med objekter. koden i klassen bestemmer hvilke properties objektene skal kunne få.
 Creature first = new Creature();
 Creature second = new Creature();
 Creature third = new Creature();
 
-// TODO: Sett properties til ulike verdier.
-// TODO: Skriv verdiene for alle tre objektene.
-
+// Jeg har gitt propertiesene til objetene forskjellige values.
 first.Name = "Pusn";
 first.Species = "Wolf";
 first.Energy = 100;
@@ -17,8 +16,9 @@ third.Name = "Grete";
 third.Species = "Bear";
 third.Energy = 200;
 
+// Her legger jeg alle objektene til i en liste.
 List<Creature> creatues = new List<Creature>() { first, second, third };
-
+// Her er en fin liten table av de forskjellige objektene.
 Console.WriteLine($"| {"NAME",-7} | {"SPECIES",-7} | {"ENERGY",-7} |");
 foreach (var creature in creatues)
 {

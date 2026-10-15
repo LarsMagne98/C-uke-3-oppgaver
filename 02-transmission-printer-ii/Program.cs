@@ -1,3 +1,4 @@
+// Overloading metoder. c# velger riktig metode ut fra hvor mange argumenter som blir tildelt.
 class Program
 {
     static void Main(string[] args)
@@ -20,7 +21,6 @@ class Program
         Console.WriteLine($"[{sender}] {message}");
     }
 
-    // TODO: Lag tredje overload.
     static void PrintTransmission(string sender, string message, string priority)
     {
         Console.WriteLine($"{priority}: [{sender}] {message}");

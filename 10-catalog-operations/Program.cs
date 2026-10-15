@@ -6,3 +6,5 @@ catalog.PrintAll();
 
 Artifact? found = catalog.FindByName("Glass Seed");
 Console.WriteLine(found is null ? "Not found" : $"Found: {found.Name}");
+
+// Ferdig.
