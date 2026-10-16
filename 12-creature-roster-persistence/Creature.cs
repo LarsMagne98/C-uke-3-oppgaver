@@ -1,3 +1,5 @@
+using System.Text;
+
 public class Creature
 {
     public string Name { get; set; }
@@ -11,6 +13,32 @@ public class Creature
         Energy = energy;
     }
 
-    // TODO: Det er valgfritt om konvertering/parsing legges her
-    // eller i egne metoder/klasser.
+    public string ToFileLine()
+    {
+        return $"{Name}|{Species}|{Energy}";
+    }
+
+    public static Creature? FromFileLine(string fileLine)
+    {
+        if (string.IsNullOrWhiteSpace(fileLine))
+        {
+            return null;
+        }
+
+        string[] parts = fileLine.Split('|');
+
+        if (parts.Length < 3)
+        {
+            return null;
+        }
+
+        int parsedEnergy = 0;
+        if (int.TryParse(parts[2], out int result))
+        {
+            parsedEnergy = result;
+        }
+
+        return new Creature(parts[0], parts[1], parsedEnergy);
+
+    }
 }
