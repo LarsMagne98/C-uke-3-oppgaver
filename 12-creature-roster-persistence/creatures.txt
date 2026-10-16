@@ -3,3 +3,4 @@ Kip|Dust Eel|18
 Sjekker ugyldig linje!
 Senn|Cloud Moth|41
 Gaya|Bat|15
+Hump|Dog|Not A number

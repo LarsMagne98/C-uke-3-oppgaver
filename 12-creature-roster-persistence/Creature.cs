@@ -32,10 +32,9 @@ public class Creature
             return null;
         }
 
-        int parsedEnergy = 0;
-        if (int.TryParse(parts[2], out int result))
+        if (!int.TryParse(parts[2], out int parsedEnergy))
         {
-            parsedEnergy = result;
+            return null;
         }
 
         return new Creature(parts[0], parts[1], parsedEnergy);
